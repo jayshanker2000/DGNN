@@ -131,6 +131,7 @@ def gendata(data_path, out_path, ignored_sample_path=None, benchmark='xview', pa
 
     # Create data tensor with shape (# examples (N), C, T, V, M)
     ## For Ntu-xview it requires > 12GB RAM, so run in colab with 25GB RAM session, otherwise session will crash
+    ## e.g. create a numpy array of (76046, 3, 300, 25, 2)
     fp = np.zeros((len(sample_label), 3, max_frame, num_joint, max_body_true), dtype=np.float32)
 
     # Fill in the data tensor `fp` one training example a time
