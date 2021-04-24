@@ -7,5 +7,7 @@ https://askubuntu.com/a/201250/1206522
 https://stackoverflow.com/a/1019124/15649660
 
 ## Push the contents of colab vm to Google drive:
-```from google.colab import drive
-drive.flush_and_unmount()```
+```
+from google.colab import drive
+drive.flush_and_unmount()
+```
