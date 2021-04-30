@@ -85,6 +85,12 @@ Here, `<dataset>` should be one of `nturgbd-cross-subject`, `nturgbd-cross-view`
 
 **Note:** At the moment, only `nturgbd-cross-subject` is supported. More config files will (hopefully) be added, or you could write your own config file using the existing ones for `nturgbd-cross-subject`.
 
+```
+python3 main.py --config ./config/nturgbd-cross-subject/train_spatial.yaml
+python3 main.py --config ./config/nturgbd-cross-view/train_spatial.yaml
+python3 main.py --config ./config/kinetics-skeleton/train_spatial.yaml
+```
+
 ### 2nd Stream: Motion
 
 Similarly, to train on the motion stream data, do:
