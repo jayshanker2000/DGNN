@@ -17,3 +17,15 @@ import os
 root='/content'
 os.chdir(root)
 ```
+
+## Changing from gpu to cpu and vice-versa
+https://stackoverflow.com/a/53267643/15649660
+```
+# at beginning of the script
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+# then whenever you get a new Tensor or Module
+# this won't copy if they are already on the desired device
+input = data.to(device)
+model = MyModule(...).to(device)
+```
