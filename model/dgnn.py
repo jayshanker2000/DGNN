@@ -82,8 +82,8 @@ class DGNBlock(nn.Module):
         _, _, _, V_edge = fe.shape
 
         # Reshape for matmul, shape: (N, CT, V)
-        fv = fv.view(N, -1, V_node)
-        fe = fe.view(N, -1, V_edge)
+        fv = fv.reshape(N, -1, V_node)
+        fe = fe.reshape(N, -1, V_edge)
 
         # Compute features for node/edge updates
         fe_in_agg = torch.einsum('nce,ev->ncv', fe, self.source_M.transpose(0,1))
