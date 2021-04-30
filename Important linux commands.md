@@ -11,3 +11,9 @@ https://stackoverflow.com/a/1019124/15649660
 from google.colab import drive
 drive.flush_and_unmount()
 ```
+## see the correct path after remounting:
+```
+import os
+root='/content'
+os.chdir(root)
+```
